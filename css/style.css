@@ -1,19 +1,41 @@
-.carousel_img{
+.carousel-image-container{
+    position: relative;
+}
+
+.carousel-image-container img{
     width: 100%;
-    height: 450px;
+    height: 500px;
     object-fit: cover;
     display: none;
 }
 
-.carousel-wrapper img.active{
+#carousel-wrapper .carousel-image-container img.active{
     display: block;
-}
-
-.description-slide{
-    width: 40%;
 }
 
 .carousel_thumbnail{
     width: 20%;
     object-fit: cover;
+}
+
+h2{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: none;
+}
+
+#carousel-wrapper .carousel-image-container h2.active{
+    display: block;
+}
+
+p{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+#carousel-wrapper .carousel-image-container p.active{
+    display: block;
 }
