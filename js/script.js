@@ -112,6 +112,11 @@ nextButton.addEventListener('click', function(){
     //  activeImageIndex = activeImageIndex + 1;
     activeImageIndex++;
 
+    // se arrivo alla fine della lista ricomincio da zero
+    if (activeImageIndex === images.length) {
+        activeImageIndex = 0;
+    }
+
     // prendo l'immagine all'indice attuale e le aggiungo la classe active per renderla visibile
     imageElements[activeImageIndex].classList.add('active');
     thumbnailElements[activeImageIndex].classList.add('active');
@@ -128,6 +133,11 @@ prevButton.addEventListener('click', function(){
 
     //  activeImageIndex = activeImageIndex - 1;
     activeImageIndex--;
+
+    // Se arrivo alla fine della lista ricomincio
+    if (activeImageIndex === -1) {
+        activeImageIndex = images.length - 1;
+    }
 
     // prendo l'immagine all'indice attuale e le aggiungo la classe active per renderla visibile
     imageElements[activeImageIndex].classList.add('active');
