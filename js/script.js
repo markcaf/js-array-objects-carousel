@@ -145,3 +145,26 @@ prevButton.addEventListener('click', function(){
     titleElements[activeImageIndex].classList.add('active');
     descriptionElements[activeImageIndex].classList.add('active');
 });
+
+// Aggiungo la costante autoplay per scorrere le immagini del carousel in automatico ogni 3 secondi
+const autoplay = setInterval(function () {
+    // prendo l'immagine attiva =>  .carousel-image-container img.active
+    imageElements[activeImageIndex].classList.remove('active');
+    thumbnailElements[activeImageIndex].classList.remove('active');
+    titleElements[activeImageIndex].classList.remove('active');
+    descriptionElements[activeImageIndex].classList.remove('active');
+
+    //  activeImageIndex = activeImageIndex + 1;
+    activeImageIndex++;
+
+    // se arrivo alla fine della lista ricomincio da zero
+    if (activeImageIndex === images.length) {
+        activeImageIndex = 0;
+    }
+
+    // prendo l'immagine all'indice attuale e le aggiungo la classe active per renderla visibile
+    imageElements[activeImageIndex].classList.add('active');
+    thumbnailElements[activeImageIndex].classList.add('active');
+    titleElements[activeImageIndex].classList.add('active');
+    descriptionElements[activeImageIndex].classList.add('active');
+    }, 3000);
