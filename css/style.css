@@ -16,7 +16,14 @@
 .carousel_thumbnail{
     width: 20%;
     object-fit: cover;
+    opacity: 0.5;
 }
+
+.thumbnails-container img.active{
+    opacity: 1.0;
+}
+
+
 
 h2{
     position: absolute;
