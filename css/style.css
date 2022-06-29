@@ -1,0 +1,14 @@
+.carousel_img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+#description-slide{
+    width: 40%;
+}
+
+.carousel_thumbnail{
+    width: 20%;
+    object-fit: cover;
+}
