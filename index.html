@@ -12,19 +12,19 @@
 </head>
 <body>
 
-    <section id="wrapper" class="mt-5">
+    <section id="wrapper" class="mt-4">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                <div class="carousel-wrapper d-flex flex-column w-75 mx-auto">
-                    <div class="carousel-image-container position-relative"></div>
-                        <!-- <img class="carousel_img" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="">
-                        <h2 class="position-absolute mt-2 ms-3 text-white title-slide">Svezia</h2>
-                        <p class="position-absolute mt-5 ms-3 text-white description-slide">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.</p> -->
+                <div id="carousel-wrapper" class="text-center">
+                    <div class="carousel-image-container">
+                    <img class="active" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="">
+                    <h2 class="active mt-2 ms-3 text-white">Svezia</h2>
+                    <p class="active mt-5 ms-3 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.</p>
                     </div>
 
-                <div class="carousel-navigation d-flex justify-content-between w-75 mx-auto position-relative">
-                    <a href="#" class="btn btn-primary mt-4 position-absolute" id="prev-button">Previous</a>
+                <div class="carousel-navigation d-flex justify-content-between position-relative">
+                    <a href="#" class="btn btn-primary position-absolute top-50" id="prev-button">Previous</a>
                     <div class="thumbnails-container d-flex">
                         <!-- inserire dinamicamente le thumbnails qui -->
                         <img class="carousel_thumbnail" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="">
@@ -33,7 +33,7 @@
                         <img class="carousel_thumbnail" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="">
                         <img class="carousel_thumbnail" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="">
                     </div>
-                    <a href="#" class="btn btn-primary mt-4 position-absolute end-0" id="next-button">Next</a>
+                    <a href="#" class="btn btn-primary position-absolute top-50 end-0" id="next-button">Next</a>
                 </div>
             </div>
         </div>
@@ -42,6 +42,6 @@
 
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
