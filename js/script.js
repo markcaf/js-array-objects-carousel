@@ -86,3 +86,52 @@ for (let i = 0 ; i < images.length ; i++){
     imagesWrapper.append(currentDescription);
     thumbnailsWrapper.append(currentThumbnail);
 }
+
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.querySelector('#next-button');
+
+// recupero la lista delle immagini disponibili nel carosello
+const imageElements = document.querySelectorAll('.carousel-image-container img');
+
+// recupero la lista delle thumbnails disponibili nel carosello
+const thumbnailElements = document.querySelectorAll('.thumbnails-container img');
+
+// recupero la lista di titoli e descrizioni
+const titleElements = document.querySelectorAll('.carousel-image-container h2');
+const descriptionElements = document.querySelectorAll('.carousel-image-container p');
+
+// devo aggiungere un comportamento conseguente ad un'interazione con i bottoni relativi
+
+nextButton.addEventListener('click', function(){
+    // prendo l'immagine attiva =>  .carousel-image-container img.active
+    imageElements[activeImageIndex].classList.remove('active');
+    thumbnailElements[activeImageIndex].classList.remove('active');
+    titleElements[activeImageIndex].classList.remove('active');
+    descriptionElements[activeImageIndex].classList.remove('active');
+
+    //  activeImageIndex = activeImageIndex + 1;
+    activeImageIndex++;
+
+    // prendo l'immagine all'indice attuale e le aggiungo la classe active per renderla visibile
+    imageElements[activeImageIndex].classList.add('active');
+    thumbnailElements[activeImageIndex].classList.add('active');
+    titleElements[activeImageIndex].classList.add('active');
+    descriptionElements[activeImageIndex].classList.add('active');
+});
+
+prevButton.addEventListener('click', function(){
+    // prendo l'immagine attiva =>  .carousel-image-container img.active
+    imageElements[activeImageIndex].classList.remove('active');
+    thumbnailElements[activeImageIndex].classList.remove('active');
+    titleElements[activeImageIndex].classList.remove('active');
+    descriptionElements[activeImageIndex].classList.remove('active');
+
+    //  activeImageIndex = activeImageIndex - 1;
+    activeImageIndex--;
+
+    // prendo l'immagine all'indice attuale e le aggiungo la classe active per renderla visibile
+    imageElements[activeImageIndex].classList.add('active');
+    thumbnailElements[activeImageIndex].classList.add('active');
+    titleElements[activeImageIndex].classList.add('active');
+    descriptionElements[activeImageIndex].classList.add('active');
+});
