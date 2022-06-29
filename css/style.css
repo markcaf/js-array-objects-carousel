@@ -2,9 +2,14 @@
     width: 100%;
     height: 450px;
     object-fit: cover;
+    display: none;
 }
 
-#description-slide{
+.carousel-wrapper img.active{
+    display: block;
+}
+
+.description-slide{
     width: 40%;
 }
 
