@@ -31,11 +31,11 @@ const images = [
 let activeImageIndex = 0;
 
 // recupero il parent all'interno del quale inserire le immagini
-const imagesWrapper = document.querySelector('.carousel-wrapper .carousel-image-container');
+const imagesWrapper = document.querySelector('#carousel-wrapper .carousel-image-container');
 // console.log(imagesWrapper);
 
 // recupero il parent all'interno del quale inserire le thumbnails
-const thumbnailsWrapper = document.querySelector('.carousel-wrapper .thumbnails-container');
+const thumbnailsWrapper = document.querySelector('.thumbnails-container');
 
 // ciclo per la lunghezza dell'array di immagini chiamato images
 for (let i = 0 ; i < images.length ; i++){
@@ -47,28 +47,42 @@ for (let i = 0 ; i < images.length ; i++){
 
     // gli attribuisco le proprietà che ritengo necessarie
     currentImage.setAttribute('src', currentElement.url);
-    currentImage.classList.add('carousel_img');
 
     // creo un elemento di tipo h2
     const currentTitle = document.createElement('h2');
+    currentTitle.innerHTML = currentElement.title;
+    console.log(currentTitle);
 
     // gli attribuisco le proprietà
-    currentTitle.classList.add("position-absolute", "mt-2", "ms-3", "text-white", "title-slide");
+    currentTitle.classList.add("mt-2", "ms-3", "text-white");
 
     // creo un elemento di tipo p
     const currentDescription = document.createElement('p');
+    currentDescription.innerHTML = currentElement.description;
 
     // gli attribuisco le proprietà
-    currentDescription.classList.add("position-absolute", "mt-5", "ms-3", "text-white", "description-slide");
+    currentDescription.classList.add("mt-5", "ms-3", "text-white");
+
+    // creo un elemento di tipo immagine per la thumbnail
+    const currentThumbnail = document.createElement('img');
+    currentThumbnail.setAttribute('src', currentElement.url);
+    currentThumbnail.classList.add("carousel_thumbnail")
+
 
 
     if (i === activeImageIndex){
         currentImage.classList.add('active');
-        // currentThumbnail.classList.add('active');
-    }
+
+        currentTitle.classList.add('active');
+
+        currentDescription.classList.add('active');
+
+        currentThumbnail.classList.add('active');
+    };
 
     // lo aggiungo al parent
     imagesWrapper.append(currentImage);
     imagesWrapper.append(currentTitle);
     imagesWrapper.append(currentDescription);
+    thumbnailsWrapper.append(currentThumbnail);
 }
