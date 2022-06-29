@@ -46,3 +46,8 @@ p{
 #carousel-wrapper .carousel-image-container p.active{
     display: block;
 }
+
+#prev-button,#next-button{
+    z-index: 1;
+}
+
